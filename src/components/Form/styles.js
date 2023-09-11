@@ -20,6 +20,9 @@ export const Container = styled.div`
 export const InputContent = styled.div`
     display: flex;
     flex-direction: column;
+    padding: 5px 5px;
+    margin-left: 10px
+
 `;
 
 export const Label = styled.label``;
@@ -27,10 +30,10 @@ export const Label = styled.label``;
 export const Input = styled.input`
     outline: none;
     border-radius: 5px;
-    padding 5px 10px;
+    padding: 5px 10px;
     font-size: 15px;
     border: 1px solid #ccc;
-`
+`;
 
 export const RadioGroup = styled.div`
     display: flex
@@ -46,10 +49,15 @@ export const RadioGroup = styled.div`
 
 export const Button = styled.button`
     padding: 5px 10px;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     color: white;
     background-color: teal;
+`;
+
+export const Select = styled.select`
+    font-family: 'Poppins', sans-serif;
 `;
 
