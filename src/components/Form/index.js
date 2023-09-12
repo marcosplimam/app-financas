@@ -3,7 +3,7 @@ import * as C from "./styles";
 import Grid from "../Grid";
 
 
-const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
+const Form = ({ handleAdd, transactionsList, setTransactionsList, filteredTransactions }) => {
     const [desc, setDesc] = useState("");
     const [amount, setAmount] = useState("");
     const [isExpense, setExpense] = useState("");
@@ -57,7 +57,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
                         onChange={(e) => setCategory(e.target.value)}
                     >
                         <option value="">Selecione uma categoria</option>
-                        <option value="Alimentação">Alimentação</option>
+                        <option value="Mercado">Mercado</option>
                         <option value="Carro">Carro</option>
                         <option value="Casa">Casa</option>
                         <option value="Fatura Carolina">Fatura Carolina</option>
@@ -87,7 +87,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
                 
                 <C.Button onClick={handleSave}>ADD</C.Button>
             </C.Container>
-            <Grid itens={transactionsList} setItens={setTransactionsList} />
+            <Grid itens={transactionsList} setItens={setTransactionsList} filteredTransactions={filteredTransactions}  />
         </>
     )
 }
