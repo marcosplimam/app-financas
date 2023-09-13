@@ -57,14 +57,14 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList, filteredTransa
                         onChange={(e) => setCategory(e.target.value)}
                     >
                         <option value="">Selecione uma categoria</option>
-                        <option value="Mercado">Mercado</option>
-                        <option value="Carro">Carro</option>
-                        <option value="Casa">Casa</option>
-                        <option value="Fatura Carolina">Fatura Carolina</option>
-                        <option value="Fatura Kim">Fatura Kim</option>
-                        <option value="Outros">Outros</option>
-                        <option value="Salário">Salário</option>
-                        <option value="Saúde e Higiene">Saúde e Higiene</option>
+                        <option value="Mercado">Mercado 🛒</option>
+                        <option value="Carro">Carro 🚗</option>
+                        <option value="Casa">Casa 🏠</option>
+                        <option value="Fatura Carolina">Fatura Carolina 💳</option>
+                        <option value="Fatura Kim">Fatura Kim 💳</option>
+                        <option value="Outros">Outros 🧩</option>
+                        <option value="Salário">Salário 💵</option>
+                        <option value="Saúde e Higiene">Saúde e Higiene 🌡️🧼</option>
                     </C.Select>
                 </C.InputContent>
                 <C.InputContent>
