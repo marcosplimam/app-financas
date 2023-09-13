@@ -3,7 +3,7 @@ import * as C from "./styles";
 import Grid from "../Grid";
 
 
-const Form = ({ handleAdd, transactionsList, setTransactionsList, filteredTransactions }) => {
+const Form = ({ handleAdd, transactionsList, setTransactionsList, filteredTransactions, setFilteredTransactions }) => {
     const [desc, setDesc] = useState("");
     const [amount, setAmount] = useState("");
     const [isExpense, setExpense] = useState("");
@@ -87,7 +87,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList, filteredTransa
                 
                 <C.Button onClick={handleSave}>ADD</C.Button>
             </C.Container>
-            <Grid itens={transactionsList} setItens={setTransactionsList} filteredTransactions={filteredTransactions}  />
+            <Grid items={transactionsList} setItens={setTransactionsList} filteredTransactions={filteredTransactions} setFilteredTransactions={setFilteredTransactions} />
         </>
     )
 }

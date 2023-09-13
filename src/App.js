@@ -6,13 +6,14 @@ import Form from "./components/Form";
 import Vencimentos from "./components/Vencimentos";
 import Filter from "./components/Filter";
 
-
 const App = () => {
   const data = localStorage.getItem("transactions");
   const [transactionsList, setTransactionsList] = useState(
     data ? JSON.parse(data) : []
   );
-  const [filteredTransactions, setFilteredTransactions] = useState([]); // Add state for filtered transactions
+  const [filteredTransactions, setFilteredTransactions] = useState(
+    data ? JSON.parse(data) : [] // Initialize filteredTransactions with data
+  );
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
   const [total, setTotal] = useState(0);
@@ -57,6 +58,7 @@ const App = () => {
         transactionsList={transactionsList}
         setTransactionsList={setTransactionsList}
         filteredTransactions={filteredTransactions} // Pass filteredTransactions here
+        setFilteredTransactions={setFilteredTransactions}
       />
       <Filter
         transactionsList={transactionsList}

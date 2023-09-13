@@ -2,10 +2,11 @@ import React from "react";
 import GridItem from "../GridItem";
 import * as C from "./styles";
 
-const Grid = ({ filteredTransactions, setItens }) => {
+const Grid = ({ filteredTransactions, setItens, setFilteredTransactions }) => {
   const onDelete = (ID) => {
     const newArray = filteredTransactions.filter((transaction) => transaction.id !== ID);
     setItens(newArray);
+    setFilteredTransactions(newArray);
     localStorage.setItem("transactions", JSON.stringify(newArray));
   };
 
